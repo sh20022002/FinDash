@@ -17,13 +17,13 @@ const InputBar = ({ placeholder, buttonText, onSubmit }) => {
   };
 
   return (
-    <div className={inputBarCss.input-bar-container}>
+    <div className={inputBarCss["input-bar-container"]}>
       <input
         type="text"
         value={inputValue}
         onChange={handleChange}
         placeholder={placeholder}
-        className={inputBarCss.input-bar}
+        className={inputBarCss["input-bar"]}
       />
       <AnimatedButton text={buttonText} onClick={handleClick} />
     </div>

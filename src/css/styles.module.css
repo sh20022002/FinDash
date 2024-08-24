@@ -1,4 +1,10 @@
 /* styles.css */
 .app {
     background-color: lightblue; /* Change to your desired color */
+    padding: auto;
+    border: 2px solid #289545;
+    border-radius: 5px;
   }
+.app:hover {
+  background-color: lightgrey; /* Change to your desired color */
+}

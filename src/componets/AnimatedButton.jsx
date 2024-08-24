@@ -3,7 +3,7 @@ import AnimatedButtonCss from '../css/AnimatedButton.module.css'; // Import the 
 
 const AnimatedButton = ({ text, onClick }) => {
   return (
-    <button className={AnimatedButtonCss.animated-button} onClick={onClick}>
+    <button className={AnimatedButtonCss["animated-button"]} onClick={onClick}>
       {text}
     </button>
   );
