@@ -8,3 +8,7 @@
 .app:hover {
   background-color: lightgrey; /* Change to your desired color */
 }
+
+.main {
+  background-color: lightseagreen;
+}

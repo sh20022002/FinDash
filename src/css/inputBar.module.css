@@ -1,23 +1,25 @@
 .input-bar-container {
-    display: flex;
-    align-items: center;
-    align-self: start;
-    gap: 10px; /* Space between input and button */
-  }
-  
-  .input-bar {
-    padding: 10px;
-    font-size: 16px;
-    width: 80%;
-    align-items: space-between;
-    border: 5px solid #286177;
-    border-radius: 5px;
-    box-sizing: content-box;
-  }
-  
-  .input-bar:focus {
-    border-color: #007BFF;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  }
-  
+  display: flex;
+  align-items: center;
+  align-self: start;
+  gap: 10px; /* Space between input and button */
+}
+
+.input-bar {
+  padding: 10px;
+  font-size: 16px;
+  width: 30%;
+  align-items: space-between;
+  border: 5px solid #6cbada;
+  border-radius: 5px;
+  box-sizing: content-box;
+  transition: border-color 0.3s;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.input-bar:focus {
+  border-color: #14651c;
+  outline: none;
+  box-shadow: 0 0 5px rgba(65, 200, 103, 0.5);
+}
