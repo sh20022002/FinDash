@@ -1,38 +1,69 @@
-import React, {useState} from 'react';
-import appStylesCss from './css/app.module.css';
-import InputBar from "./componets/InputBar"; 
-import AnimatedButton from "./componets/AnimatedButton";
-
+import React, { useState } from 'react';
+import InputBar from "./components/InputBar";
+import AnimatedButton from './Components/AnimatedButton';
+import appCss from './css/App.module.css'; // Ensure this path is correct
 
 function App() {
   const [formData, setFormData] = useState({
-    1: '',
-    2: '',
-    3: '',
-    4: '',
-    5: '',
-    6: ''
+    a: '',
+    b: '',
+    c: '',
+    d: '',
+    e: '',
+    i: ''
   });
-  const handleInputSubmit = (field, value) => {
+
+  const handleInputChange = (field) => (value) => {
     setFormData({ ...formData, [field]: value });
   };
 
-  const handleFormSubmit = () => {
-    console.log('Form submitted:', formData);
+  const handleInputSubmit = (field, value) => {
+    console.log('Input submitted:', field, value);
+    setFormData({ ...formData, [field]: value });
   };
 
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    console.log('Form submitted:', formData);
+  };
+  const toBinary = (n) => (n).toString(2);
+
   return (
-    <div >
-        <h1>Input Bar with Animated Button</h1>
-        <form>
-          <InputBar className={appStylesCss["input-spaceing"]} placeholder="Enter your m" onSubmit={(value) => handleInputSubmit("1", value)} />
-          <InputBar className={appStylesCss["input-spaceing"]} placeholder="Enter your Last" onSubmit={(value) => handleInputSubmit("2", value)} />
-          <InputBar className={appStylesCss["input-spaceing"]} placeholder="Enter your name" onSubmit={(value) => handleInputSubmit("3", value)} />
-          <InputBar className={appStylesCss["input-spaceing"]} placeholder="Enter your name" onSubmit={(value) => handleInputSubmit("4", value)} />
-          <InputBar className={appStylesCss["input-spaceing"]} placeholder="Enter your name" onSubmit={(value) => handleInputSubmit("5", value)} />
-          <InputBar className={appStylesCss["input-spaceing"]} placeholder="Enter your name" onSubmit={(value) => handleInputSubmit("6", value)} />
-          <AnimatedButton text="suubmit form" onClick={handleFormSubmit} />
-        </form>
+    <div className={appCss["container"]}>
+      <form onSubmit={handleFormSubmit}>
+        <h1>{toBinary(6)}</h1>
+        <InputBar
+          placeholder="a"
+          onChange={handleInputChange("a")}
+          onSubmit={(value) => handleInputSubmit("a", value)}
+        />
+        <InputBar
+          placeholder="b"
+          onChange={handleInputChange("b")}
+          onSubmit={(value) => handleInputSubmit("b", value)}
+        />
+        <InputBar
+          placeholder="c"
+          onChange={handleInputChange("c")}
+          onSubmit={(value) => handleInputSubmit("c", value)}
+        />
+        <InputBar
+          placeholder="d"
+          onChange={handleInputChange("d")}
+          onSubmit={(value) => handleInputSubmit("d", value)}
+        />
+        <InputBar
+          placeholder="e"
+          onChange={handleInputChange("e")}
+          onSubmit={(value) => handleInputSubmit("e", value)}
+        />
+        <InputBar
+          placeholder="i"
+          onChange={handleInputChange("i")}
+          onSubmit={(value) => handleInputSubmit("i", value)}
+        />
+        <AnimatedButton text="submit form" />
+      </form>
     </div>
   );
 }

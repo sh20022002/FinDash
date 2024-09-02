@@ -8,7 +8,7 @@
 .input-bar {
   padding: 10px;
   font-size: 16px;
-  width: 30%;
+  width: 100%;
   align-items: space-between;
   border: 5px solid #6cbada;
   border-radius: 5px;
@@ -19,7 +19,7 @@
 }
 
 .input-bar:focus {
-  border-color: #14651c;
+  border-color: #13be24;
   outline: none;
   box-shadow: 0 0 5px rgba(65, 200, 103, 0.5);
 }
