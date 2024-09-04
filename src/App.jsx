@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import InputBar from "./components/InputBar";
 import AnimatedButton from './Components/AnimatedButton';
 import appCss from './css/App.module.css'; // Ensure this path is correct
+import AddFrameObj from './components/addFrameObj';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -26,12 +27,11 @@ function App() {
     event.preventDefault();
     console.log('Form submitted:', formData);
   };
-  const toBinary = (n) => (n).toString(2);
+
 
   return (
     <div className={appCss["container"]}>
       <form onSubmit={handleFormSubmit}>
-        <h1>{toBinary(6)}</h1>
         <InputBar
           placeholder="a"
           onChange={handleInputChange("a")}
@@ -64,6 +64,10 @@ function App() {
         />
         <AnimatedButton text="submit form" />
       </form>
+      <AddFrameObj
+        onChange={handleInputChange("a")}
+        onSubmit={(value) => handleInputSubmit("a", value)}
+      />
     </div>
   );
 }

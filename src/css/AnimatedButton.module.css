@@ -34,4 +34,11 @@
     background-color: #00b342;
     transform: scale(1.05);
   }
+
+.expenses {
+    background-color: #a82222;
+}
+.revanue {
+  background-color: #20a38f;
+}
   
