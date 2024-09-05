@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import InputBar from "./components/InputBar";
 import AnimatedButton from './Components/AnimatedButton';
 import appCss from './css/App.module.css'; // Ensure this path is correct
-import AddFrameObj from './components/addFrameObj';
+import EntryManager from './components/EntryManager';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -27,6 +27,7 @@ function App() {
     event.preventDefault();
     console.log('Form submitted:', formData);
   };
+  
 
 
   return (
@@ -62,14 +63,10 @@ function App() {
           onChange={handleInputChange("i")}
           onSubmit={(value) => handleInputSubmit("i", value)}
         />
-        <AnimatedButton text="submit form" />
+        <AnimatedButton onSubmit={handleFormSubmit} text="submit form" />
       </form>
-      <AddFrameObj
-        onChange={handleInputChange("a")}
-        onSubmit={(value) => handleInputSubmit("a", value)}
-      />
+      <EntryManager/>
     </div>
   );
-}
-
+};
 export default App;

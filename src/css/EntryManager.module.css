@@ -1,0 +1,84 @@
+/* EntryManager.module.css */
+
+.entryManager {
+    margin: 20px;
+    padding: 20px;
+    border: 0;
+    border-radius: 5px;
+    width: 300px;
+    text-align: right;
+    
+  }
+  .text-color {
+    color: #32973b;
+  }
+  .inputField {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  .inputField:focus {
+    border-color: #13be24;
+    outline: none;
+    box-shadow: 0 0 5px rgba(65, 200, 103, 0.5);
+  }
+  
+  .buttonGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .expensesButton {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .revenueButton {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+  }
+  
+  .expensesButton:hover, .revenueButton:hover {
+    opacity: 0.9;
+  }
+  
+  .entriesContainer {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .entryItem {
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+  }
+  .entryItem:hover {
+    background-color: #f10b0b;
+  }
+  
+  .expenses {
+    background-color: #824747;
+  }
+  
+  .revenue {
+    background-color: #459245;
+  }
+  
