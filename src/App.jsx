@@ -34,32 +34,32 @@ function App() {
     <div className={appCss["container"]}>
       <form onSubmit={handleFormSubmit}>
         <InputBar
-          placeholder="a"
+          placeholder="pre tax income"
           onChange={handleInputChange("a")}
           onSubmit={(value) => handleInputSubmit("a", value)}
         />
         <InputBar
-          placeholder="b"
+          placeholder="reatairment contrubution"
           onChange={handleInputChange("b")}
           onSubmit={(value) => handleInputSubmit("b", value)}
         />
         <InputBar
-          placeholder="c"
+          placeholder="other fix income"
           onChange={handleInputChange("c")}
           onSubmit={(value) => handleInputSubmit("c", value)}
         />
         <InputBar
-          placeholder="d"
+          placeholder="other fix expense"
           onChange={handleInputChange("d")}
           onSubmit={(value) => handleInputSubmit("d", value)}
         />
         <InputBar
-          placeholder="e"
+          placeholder="amount of mony in bank"
           onChange={handleInputChange("e")}
           onSubmit={(value) => handleInputSubmit("e", value)}
         />
         <InputBar
-          placeholder="i"
+          placeholder="debts"
           onChange={handleInputChange("i")}
           onSubmit={(value) => handleInputSubmit("i", value)}
         />

@@ -6,17 +6,19 @@
     border: 0;
     border-radius: 5px;
     width: 300px;
-    text-align: right;
+    text-align: center;
     
   }
   .text-color {
     color: #32973b;
+    font-style: italic bold;
+
   }
   .inputField {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
-    border: 3px solid #ccc;
+    border: 3px solid #72a5dd;
     border-radius: 4px;
     font-size: 16px;
   }
