@@ -42,7 +42,8 @@
     border-radius: 4px;
     cursor: pointer;
     flex: 1;
-    margin-right: 10px;
+    margin-left: 5px;
+    
   }
   
   .revenueButton {
@@ -53,10 +54,11 @@
     border-radius: 4px;
     cursor: pointer;
     flex: 1;
+    margin-left: 10px;
   }
   
   .expensesButton:hover, .revenueButton:hover {
-    opacity: 0.9;
+    opacity: 0.6;
   }
   
   .entriesContainer {
@@ -65,22 +67,37 @@
   }
   
   .entryItem {
-    padding: 10px;
-    margin-bottom: 5px;
+    padding: 5px;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     color: black;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+    
+    
   }
   .entryItem:hover {
-    background-color: #f10b0b;
+    opacity: 0.8;
   }
   
   .expenses {
-    background-color: #824747;
+    background-color: red;
   }
   
   .revenue {
     background-color: #459245;
+  }
+  .deleteButton{
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 70px;
+  }
+  .icon{
+    align-self: center;
   }
   

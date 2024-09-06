@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from '../css/EntryManager.module.css'; // Import CSS module for styling
+import deleteIcon from '../assets/Trash.svg'; // Import the delete icon
 
 const EntryManager = () => {
   const [inputValue, setInputValue] = useState('');
@@ -21,12 +22,18 @@ const EntryManager = () => {
     // Add the new entry to the state
     setEntries((prevEntries) => [
       ...prevEntries,
-      { type, value }
+      { id: Date.now(), type, value }
     ]);
 
     // Clear the input field after submission
     setInputValue('');
+
   };
+  const deleteEntry = (id) => {
+    setEntries((prevEntries) => prevEntries.filter((entry) => entry.id !== id));
+  };
+
+
 
   return (
     <div className={styles.entryManager}>
@@ -61,12 +68,17 @@ const EntryManager = () => {
       <div className={styles.entriesContainer}>
         {entries.map((entry, index) => (
           <div
-            key={index}
+            key={entry.id}
             className={`${styles.entryItem} ${
               entry.type === 'Expenses' ? styles.expenses : styles.revenue
             }`}
           >
-            {entry.type}: ${entry.value.toFixed(2)}
+            <span>{entry.type}: ${entry.value.toFixed(2)}</span>
+            <button
+              className={styles.deleteButton}
+              onClick={() => deleteEntry(entry.id)}>
+              <img src={deleteIcon} alt="Delete" className={styles.icon} />
+            </button>
           </div>
         ))}
       </div>

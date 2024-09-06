@@ -41,4 +41,16 @@
 .revanue {
   background-color: #20a38f;
 }
+.deleteButton {
+  background: transparent;
+  border: none;
+  color: #666;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.deleteButton:hover {
+  color: red;
+}
   
